@@ -16,20 +16,18 @@ export default function ProjectCard(props) {
 
                 <div className={theme === 'dark' ? `${styles.card} ${styles.reverseCard}` : `${styles.card} ${styles.card_light} ${styles.reverseCard}`}>
 
+                    <a className={styles.image_container} href={props.demoLink}>
+                        <img
+                            src={props.imgSrc}
+                            width={width}
+                            height={height}
+                            alt={`capture d'écran du projet ${props.title}`}
+                            className={styles.project_image}
+                        >
+                        </img>
+                        <span className={styles.overlay}></span>
+                    </a>
 
-                    <div className={`${styles.image} ${styles.imageReverse}`}>
-                        <a className={styles.image_container} href={props.demoLink}>
-                            <img
-                                src={props.imgSrc}
-                                width={width}
-                                height={height}
-                                alt={`capture d'écran du projet ${props.title}`}
-                                className={styles.project_image}
-                            >
-                            </img>
-                            <span className={styles.overlay}></span>
-                        </a>
-                    </div>
                     <div className={styles.content}>
                         <h4 className={styles.project_title}>{props.title}<hr /></h4>
                         <div className={`${styles.project_description} ${styles[props.projectNumber]} ${styles.project_descriptionReverse} `}>
@@ -47,17 +45,17 @@ export default function ProjectCard(props) {
 
                 : <div className={theme === 'dark' ? `${styles.card}` : `${styles.card} ${styles.card_light} `}>
 
-                    <div className={styles.image}>
-                        <a className={styles.image_container} /* className={styles.image}  */ href={props.demoLink}>
-                            <img
-                                src={props.imgSrc}
-                                className={styles.project_image}
-                                alt={`capture d'écran du projet ${props.title}`}
-                            >
-                            </img>
-                            <span className={styles.overlay}></span>
-                        </a>
-                    </div>
+
+                    <a className={styles.image_container} /* className={styles.image}  */ href={props.demoLink}>
+                        <img
+                            src={props.imgSrc}
+                            className={styles.project_image}
+                            alt={`capture d'écran du projet ${props.title}`}
+                        >
+                        </img>
+                        <span className={styles.overlay}></span>
+                    </a>
+
                     <div className={styles.content}>
                         <h4 className={styles.project_title}>{props.title}<hr /></h4>
                         <div className={`${styles.project_description} ${styles[props.projectNumber]}`}>
