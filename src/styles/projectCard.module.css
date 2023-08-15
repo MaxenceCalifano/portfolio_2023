@@ -1,0 +1,182 @@
+.card {
+    display: flex;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.card.card_light {
+    color: var(--background-color);
+    transition: all ease-in-out 300ms;
+}
+
+.card.card_light .project_description {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.reverseCard {
+    flex-direction: row-reverse;
+}
+
+.project_title {
+    display: inline;
+}
+
+.project_title hr {
+    width: 50%;
+    margin: 0.4rem 0;
+    border-top: 0;
+}
+
+.image_container {
+    /*  display: grid;*/
+    grid-template-areas: "overlay";
+    display: block;
+    height: 100%;
+}
+
+.image_container>span {
+    grid-area: overlay;
+}
+
+/* .overlay {
+    background-color: var(--background-color);
+    opacity: 0.5;
+    border-radius: 10px;
+    transition: opacity ease-in-out 300ms;
+
+}
+
+.overlay:hover {
+    opacity: 0;
+} */
+
+.image {
+    width: 40%;
+    display: block;
+    transition: background-color ease-in-out 200ms;
+    z-index: 1;
+}
+
+.image:hover {
+    background-color: transparent;
+}
+
+.project_image,
+.image {
+    border-radius: 3%;
+}
+
+.project_image {
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid rgb(184, 184, 184);
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.project_description {
+    background-color: var(--card-color);
+    padding: 20px 40px;
+    border-radius: 0 10px 10px 0;
+    position: relative;
+    color: var(--main-color);
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.project_descriptionReverse {
+    left: auto;
+    border-radius: 10px 0 0 10px;
+}
+
+.project_tech_list {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.project_tech_list li {
+    display: inline;
+    font-weight: 600;
+    background-color: var(--card-color);
+    margin-top: 0.2rem;
+    margin-right: 0.2rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.card.card_light .project_tech_list li {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.project_links a {
+    font-weight: bold;
+    font-size: larger;
+    transition: color ease-in-out 150ms;
+
+}
+
+.project_links a:hover {
+    color: var(--main-color)
+}
+
+.project_title,
+.project_tech_list,
+.project_links {
+    margin-left: 10px;
+}
+
+.project_links a {
+    margin-right: 1rem;
+}
+
+@media (max-width: 1080px) {
+    .image {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .image {
+        margin-bottom: 10%;
+    }
+}
+
+@media (max-width: 576px) {
+    .project_description {
+        background-size: cover;
+        border-radius: 15px;
+    }
+
+    .project1 {
+        background-image: linear-gradient(rgba(34, 34, 34, 0.8), rgba(34, 34, 34, 0.92)), url("/images/Sans-titre-2.jpg");
+    }
+
+    .project2 {
+        background-image: linear-gradient(rgba(34, 34, 34, 0.8), rgba(34, 34, 34, 0.80)), url("/images/screen_react_calculator.jpg");
+    }
+
+    .project3 {
+        background-image: linear-gradient(rgba(34, 34, 34, 0.8), rgba(34, 34, 34, 0.85)), url("/images/screen_pomodoro_timer.jpg");
+    }
+
+    .project4 {
+        background-image: linear-gradient(rgba(34, 34, 34, 0.8), rgba(34, 34, 34, 0.9)), url("/images/screen_groupomania.jpg");
+    }
+
+    .image {
+        display: none;
+    }
+}

@@ -1,0 +1,111 @@
+.header {
+  background-color: var(--main-color);
+  padding: 1rem;
+  height: 100vh;
+  color: #454545;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.header>* {
+  color: #454545;
+}
+
+.header.header_light>* {
+  color: #ffffff;
+}
+
+.header h1 {
+  font-size: 4rem;
+  font-family: 'Sansita Swashed', cursive;
+  ;
+}
+
+.header h2 {
+  font-size: 2rem;
+}
+
+.header h1,
+.header h2,
+.header button {
+  margin: 1rem 0;
+}
+
+.socials {
+  display: flex;
+  gap: 10px;
+}
+
+.socials hr {
+  flex-grow: 2;
+  border: 0;
+  height: 2px;
+}
+
+.main {
+  min-height: 100vh;
+  padding: 4rem 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--background-color);
+  transition: background-color ease-in-out 300ms;
+  color: white;
+}
+
+.main.main_light {
+  background-color: #ffffff;
+  transition: all ease-in-out 300ms;
+}
+
+.main.main_light h2,
+.main.main_light h3 {
+  color: var(--background-color);
+}
+
+.main.main_light hr {
+  border-color: var(--background-color);
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.skills_section {
+  width: 100%;
+}
+
+.about p,
+.about p>* {
+  margin: 1rem 0;
+}
+
+.about ul {
+  list-style-type: none;
+}
+
+.about.about_light {
+  color: var(--background-color);
+}
+
+.contact {
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+  .header h1 {
+    font-size: 3rem;
+  }
+}
