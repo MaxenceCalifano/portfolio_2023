@@ -141,6 +141,7 @@ export default function Home() {
               tech_list={['React Native', 'PostgreSQL', 'Supabase', 'Expo']}
               demoLink='https://sportsee.maxencecalifano.tech/'
               projectNumber="project7"
+              reverse
             >
               Vantivities est projet personnel que j'ai réalisé en parallèle de ma formation. L'application permet au utilisateur de créer des activités pour se rencontrer en vrai et contient un chat. Cela m'a permis de travailler sur de nombreuses choses : <ul>
                 <li>La gestion de compte utilisateur</li>
