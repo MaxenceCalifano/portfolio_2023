@@ -19,6 +19,14 @@ export default function Home() {
   const aboutRef = useRef();
   const contactRef = useRef();
 
+  const projects = [{
+    imgSrc: "../src/assets/screen_groupomania.jpg",
+    title: 'Groupomania',
+    techList: ['React', 'NodeJS', 'Express', 'MySQL'],
+    demoLink: 'https://maxencecalifano.github.io/OhMyFood/',
+    githubLink: 'https://github.com/MaxenceCalifano/Groupomania',
+  }]
+
   function scrollTo(target) {
     target.current.scrollIntoView({
       behavior: 'smooth',
@@ -159,7 +167,18 @@ export default function Home() {
               demoLink='https://www.npmjs.com/package/react-date-picker-mc'
               projectNumber="project7"
             >
-              Dans le cadre de ma formation, il était demandé de transformer une application Jquery en React. Il a fallu remplacer le plugin Datepicker de Jquery. Je l'ai donc recréé de zéro en React et l'ai packagé et rendu disponible sur NPM.
+              Dans le cadre de ma formation, il était demandé de transformer une application Jquery en React. Il a fallu remplacer le plugin Datepicker de Jquery. Je l'ai donc recréé de zéro en React puis packagé et rendu disponible sur NPM.
+            </ProjectCard>
+            <ProjectCard
+              imgSrc="../src/assets/Capture-p9.jpg"
+              title="Débogage et test d'un SaaS en Javascript"
+              tech_list={['Javascript', 'Jest', 'Cypress']}
+              githubLink='https://github.com/MaxenceCalifano/Billed-app-FR-Front'
+              reverse
+            >
+              Pour ce projet, il était fourni une application Javascript permettant aux utilisateurs d'ajouter des notes de frais, mais elle comportait beaucoup de bug.<br /> Cela m'a permis de m'entraîner au débogage, en utilisant notamment la console du navigateur.
+
+              J'ai dû ensuite écrire des tests unitaires et d'intégrations à l'aide de Jest. J'ai pu aussi expérimenter les tests end-to-end avec Cypress.
             </ProjectCard>
 
           </div>

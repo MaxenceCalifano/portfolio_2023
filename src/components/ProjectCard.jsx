@@ -34,11 +34,11 @@ export default function ProjectCard(props) {
                             <p>{props.children}</p>
                         </div>
                         <ul className={styles.project_tech_list}>
-                            {props.tech_list.map(i => <li key={i}>{i} </li>)}
+                            {props.techList.map(i => <li key={i}>{i} </li>)}
                         </ul>
                         <div className={styles.project_links}>
-                            <a href={props.githubLink}><FontAwesomeIcon icon={faGithub} title="lien vers le github du projet" /></a>
-                            <a href={props.demoLink}><FontAwesomeIcon icon={faArrowUpRightFromSquare} title="lien vers la demo du projet" /></a>
+                            {props.githubLink ? <a href={props.githubLink} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} title="lien vers le repo Github du projet" /></a> : null}
+                            {props.demoLink ? <a href={props.demoLink} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faArrowUpRightFromSquare} title="lien vers la demo du projet" /></a> : null}
                         </div>
                     </div>
                 </div>
@@ -62,7 +62,7 @@ export default function ProjectCard(props) {
                             <p>{props.children}</p>
                         </div>
                         <ul className={styles.project_tech_list}>
-                            {props.tech_list.map(i => <li key={i}>{i} </li>)}
+                            {props.techList.map(i => <li key={i}>{i} </li>)}
                         </ul>
                         <div className={styles.project_links}>
                             {props.githubLink ? <a href={props.githubLink} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} title="lien vers le repo Github du projet" /></a> : null}
