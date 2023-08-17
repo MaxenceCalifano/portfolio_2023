@@ -5,6 +5,8 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { ThemeContext } from "./Themes/ThemeContext";
 
+
+//{reverse, text, demoLink, githubLink, title, }
 export default function ProjectCard(props) {
     const height = props.height;
     const width = props.width;
