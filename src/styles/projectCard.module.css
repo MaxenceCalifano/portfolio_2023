@@ -12,7 +12,7 @@
 
 .card.card_light .project_description {
     background-color: var(--main-color);
-    color: white;
+    color: var(--card-color);
 }
 
 .reverseCard {
@@ -90,7 +90,7 @@
     padding: 20px 40px;
     border-radius: 0 10px 10px 0;
     position: relative;
-    color: var(--main-color);
+    color: white;
     min-height: 300px;
     display: flex;
     align-items: center;

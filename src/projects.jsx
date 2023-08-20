@@ -5,7 +5,7 @@ const projects = [{
   demoLink: 'https://maxencecalifano.github.io/OhMyFood/',
   githubLink: 'https://github.com/MaxenceCalifano/Groupomania',
   personalProject: false,
-  text: "Groupomania est un projet de réseau social pour entreprise, on y retrouve de nombreuses fonctionnalités. L&apos;utilisateur y a la possibilité de créer un compte et de le modifier.Et de demander la réinitialisation du mot de passe si besoin. <br />Une fois connecté il est possible de créer des posts et des commentaires, de les modifier et supprimer.Sur ce projet, j'ai pu notamment, créer un backend avec nodejs et Express, gérer les données dans une base relationnelle MySQL et relié le tout à un frontend en ReactJS"
+  text: <div>Groupomania est un projet de réseau social pour entreprise, on y retrouve de nombreuses fonctionnalités. L&apos;utilisateur y a la possibilité de créer un compte et de le modifier.Et de demander la réinitialisation du mot de passe si besoin. <br />Une fois connecté il est possible de créer des posts et des commentaires, de les modifier et supprimer.Sur ce projet, j'ai pu notamment, créer un backend avec nodejs et Express, gérer les données dans une base relationnelle MySQL et relié le tout à un frontend en ReactJS</div>
 }, {
   imgSrc: "../src/assets/Sans-titre-2.jpg",
   title: 'OhMyFood!',
@@ -58,7 +58,7 @@ const projects = [{
   demoLink: 'https://sportsee.maxencecalifano.tech/',
   githubLink: 'https://github.com/MaxenceCalifano/sportsee',
   personalProject: false,
-  text: "Un tableau de bord affichant des données fournies par un backend. Sur ce projet j'ai notamment pu travailler avec la librairie Rechart, et continuer à pratiquer l'utilisation de React."
+  text: <p>Un tableau de bord affichant des données fournies par un backend. Sur ce projet j&apos;ai notamment pu travailler avec la librairie Rechart, et continuer à pratiquer l&apos;utilisation de React.</p>
 },
 {
   imgSrc: "../src/assets/vantivities.jpg",
@@ -84,8 +84,8 @@ const projects = [{
   techList: ['Javascript', 'Jest', 'Cypress'],
   githubLink: 'https://github.com/MaxenceCalifano/Billed-app-FR-Front',
   personalProject: false,
-  text: "Pour ce projet, une application Javascript était fournie, elle permettait aux utilisateurs d'ajouter des notes de frais, mais elle comportait beaucoup de bug.<br /> Cela m'a permis de m'entraîner au débogage, en utilisant notamment la console du navigateur.J'ai dû ensuite écrire des tests unitaires et d'intégrations à l'aide de Jest. J'ai pu aussi expérimenter les tests end-to-end avec Cypress."
+  text: <div>Pour ce projet, une application Javascript était fournie, elle permettait aux utilisateurs d&apos;ajouter des notes de frais, mais elle comportait beaucoup de bug.<br /> Cela m&apos;a permis de m&apos;entraîner au débogage, en utilisant notamment la console du navigateur. <br />J&apos;ai dû ensuite écrire des tests unitaires et d&apos;intégrations à l&apos;aide de Jest. J&apos;ai pu aussi expérimenter les tests end-to-end avec Cypress.</div>
 },
 ]
 
-export default projects;
+export default projects

@@ -47,7 +47,7 @@ export default function Home() {
           contactRef={contactRef}>
         </Navbar>
 
-        <h1>Maxence,<br />Développeur Web</h1>
+        <h1>Je suis Maxence,<br />Développeur Web</h1>
         <h2>Je construis des applications Web à l&apos;aide de React.JS, Node.JS, Express et MySQL</h2>
         <Button scrollTo={scrollTo} projectsRef={projectsRef}>Découvrir mes projets</Button>
         <div className={styles.socials}>
