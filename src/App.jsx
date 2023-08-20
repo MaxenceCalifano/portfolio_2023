@@ -61,9 +61,9 @@ export default function Home() {
         <section>
           <SectionSeparator title="Mes projets" />
 
-          <button className={selectedFilter === 0 ? styles.filterButton_selected : styles.filterButton} onClick={() => { setSortedProjects(projects); setSelectedFilter(0) }}>Tout</button>
-          <button className={selectedFilter === 1 ? styles.filterButton_selected : styles.filterButton} onClick={() => sortProjects(false)}>Projets en formations</button>
-          <button className={selectedFilter === 2 ? styles.filterButton_selected : styles.filterButton} onClick={() => sortProjects(true)}>Projets persos</button>
+          <button className={selectedFilter === 0 ? styles.filterButton_selected : theme === 'dark' ? styles.filterButton : styles.filterButtonLight} onClick={() => { setSortedProjects(projects); setSelectedFilter(0) }}>Tout</button>
+          <button className={selectedFilter === 1 ? styles.filterButton_selected : theme === 'dark' ? styles.filterButton : styles.filterButtonLight} onClick={() => sortProjects(false)}>Projets en formations</button>
+          <button className={selectedFilter === 2 ? styles.filterButton_selected : theme === 'dark' ? styles.filterButton : styles.filterButtonLight} onClick={() => sortProjects(true)}>Projets persos</button>
 
           <div ref={projectsRef} id="projects" className={styles.projects}>
             {sortedProjets.map((project, key) => <ProjectCard
