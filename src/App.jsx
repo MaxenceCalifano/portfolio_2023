@@ -77,6 +77,31 @@ export default function Home() {
               {project.text}
             </ProjectCard>)}
           </div>
+
+          <section>
+            <SectionSeparator title='Formations' />
+            <div style={{ width: '90%', margin: 'auto' }}>
+              <p className={theme === 'dark' ? styles.course : styles.courseLight}>
+                DEVELOPPEUR D&apos;APPLICATION Javascript React titre RNCP niveau 6 (bac +3/4) - OpenClassRooms
+                <hr className={theme === 'dark' ? styles.courseHr : styles.courseHrLight} />
+                Formation très complémentaire à la formation développpeur web. En 12 mois et sur 14 projets, j&apos;ai pu travailler appronfondir mes connaissances sur Javascript, CSS, React/Redux, les tests et l&apos;accéssiblité
+              </p>
+
+              <p className={theme === 'dark' ? styles.course : styles.courseLight}>DEVELOPPEUR WEB titre RNCP niveau 5 (bac +2) - OpenClassRooms
+                <hr className={theme === 'dark' ? styles.courseHr : styles.courseHrLight} />
+                Formation en 6 mois. Elle m&apos;a permis de consolider mon socle de connaissances sur le développement web en partant de projets de sites statique en HTML/CSS, puis avec des projets Javascript frontend et backend, pour finir par un projet fullstack React, nodeJS et MySQL.
+              </p>
+              <p className={theme === 'dark' ? styles.course : styles.courseLight}>Front End Development Libraries - freeCodeCamp
+                <hr className={theme === 'dark' ? styles.courseHr : styles.courseHrLight} />
+                Certification en approximativement 300 heures qui m&apos;initié au travers d&apos;exercices et de projets, à l&apos;utilisation de librairies front-end comme React, Redux et Bootstrap
+              </p>
+              <p className={theme === 'dark' ? styles.course : styles.courseLight}>JavaScript Algorithms and Data Structures - freeCodeCamp
+                <hr className={theme === 'dark' ? styles.courseHr : styles.courseHrLight} />
+                Certification via laquelle j&apos;ai pu apprendre les fondamentaux de Javascript, manipuler les différents type de données et écrire mes premiers algorithmes.
+              </p>
+            </div>
+          </section>
+
         </section>
         <section ref={skillsRef} className={styles.skills_section}>
           <SectionSeparator title="Ma stack" />
@@ -93,7 +118,7 @@ export default function Home() {
               <li><FaCodeCompare /> Express</li>
               <li><FaDatabase /> MySQL</li>
               <li><FaServer /> API Rest</li>
-              <li><FaRegFileCode /> MongoDB</li>
+              <li><FaRegFileCode /> MongoDB</li>/
             </SkillsCard>
           </div>
         </section>

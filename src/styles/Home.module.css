@@ -99,6 +99,30 @@
   transition: all .5s ease;
 }
 
+.course {
+  border-radius: 10px;
+  background-color: var(--card-color);
+  padding: 20px;
+}
+
+.courseLight {
+  border-radius: 10px;
+  background-color: var(--main-color);
+  padding: 20px;
+  color: var(--card-color);
+}
+
+.courseHr {
+  width: 20%;
+  margin-left: 0;
+}
+
+.courseHrLight {
+  width: 20%;
+  margin-left: 0;
+  border-color: white;
+}
+
 .skills {
   display: flex;
   flex-wrap: wrap;

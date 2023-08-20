@@ -84,7 +84,7 @@ const projects = [{
     techList: ['Javascript', 'Jest', 'Cypress'],
     githubLink: 'https://github.com/MaxenceCalifano/Billed-app-FR-Front',
     personalProject: false,
-    text: "Pour ce projet, il était fourni une application Javascript permettant aux utilisateurs d'ajouter des notes de frais, mais elle comportait beaucoup de bug.<br /> Cela m'a permis de m'entraîner au débogage, en utilisant notamment la console du navigateur.J'ai dû ensuite écrire des tests unitaires et d'intégrations à l'aide de Jest. J'ai pu aussi expérimenter les tests end-to-end avec Cypress."
+    text: "Pour ce projet, une application Javascript était fournie, elle permettait aux utilisateurs d'ajouter des notes de frais, mais elle comportait beaucoup de bug.<br /> Cela m'a permis de m'entraîner au débogage, en utilisant notamment la console du navigateur.J'ai dû ensuite écrire des tests unitaires et d'intégrations à l'aide de Jest. J'ai pu aussi expérimenter les tests end-to-end avec Cypress."
   },
   ]
 
