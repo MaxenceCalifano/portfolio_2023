@@ -7,6 +7,7 @@
   --background-color: #454545;
   --card-color: rgb(34, 34, 34);
   --card-border-radius: 15px;
+  --padding: 2rem 1rem;
 }
 
 html,

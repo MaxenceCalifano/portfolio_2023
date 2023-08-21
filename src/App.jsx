@@ -80,10 +80,12 @@ export default function Home() {
         </section>
         <section>
           <SectionSeparator title="Mes projets" />
+          <div className={styles.projectsButtons}>
+            <button className={selectedFilter === 0 ? styles.filterButton_selected : theme === 'dark' ? styles.filterButton : styles.filterButtonLight} onClick={() => { setSortedProjects(projects); setSelectedFilter(0) }}>Tout</button>
+            <button className={selectedFilter === 1 ? styles.filterButton_selected : theme === 'dark' ? styles.filterButton : styles.filterButtonLight} onClick={() => sortProjects(false)}>Projets en formations</button>
+            <button className={selectedFilter === 2 ? styles.filterButton_selected : theme === 'dark' ? styles.filterButton : styles.filterButtonLight} onClick={() => sortProjects(true)}>Projets persos</button>
+          </div>
 
-          <button className={selectedFilter === 0 ? styles.filterButton_selected : theme === 'dark' ? styles.filterButton : styles.filterButtonLight} onClick={() => { setSortedProjects(projects); setSelectedFilter(0) }}>Tout</button>
-          <button className={selectedFilter === 1 ? styles.filterButton_selected : theme === 'dark' ? styles.filterButton : styles.filterButtonLight} onClick={() => sortProjects(false)}>Projets en formations</button>
-          <button className={selectedFilter === 2 ? styles.filterButton_selected : theme === 'dark' ? styles.filterButton : styles.filterButtonLight} onClick={() => sortProjects(true)}>Projets persos</button>
 
           <div ref={projectsRef} id="projects" className={styles.projects}>
             {sortedProjets.map((project, key) => <ProjectCard
@@ -97,31 +99,37 @@ export default function Home() {
               {project.text}
             </ProjectCard>)}
           </div>
-
-          <section ref={formationRef} >
-            <SectionSeparator title='Formations' />
-            <div style={{ width: '90%', margin: 'auto' }}>
-              <p className={theme === 'dark' ? styles.course : styles.courseLight}>
-                DEVELOPPEUR D&apos;APPLICATION Javascript React titre RNCP niveau 6 (bac +3/4) - OpenClassRooms
+        </section>
+        <section ref={formationRef} >
+          <SectionSeparator title='Formations' />
+          <div className={styles.courseWrapper} >
+            <div className={theme === 'dark' ? styles.courseSection : styles.courseSectionLight}>
+              <p className={theme === 'dark' ? styles.course : styles.courseLight} style={{ borderRight: "1px solid white" }}>
+                <span className={styles.courseTitle}>DEVELOPPEUR D&apos;APPLICATION Javascript React titre RNCP niveau 6 (bac +3/4) - OpenClassRooms</span>
                 <hr className={theme === 'dark' ? styles.courseHr : styles.courseHrLight} />
-                Formation très complémentaire à la formation développpeur web. En 12 mois et sur 14 projets, j&apos;ai pu travailler appronfondir mes connaissances sur Javascript, CSS, React/Redux, les tests et l&apos;accéssiblité
+                Formation très complémentaire à la formation développpeur web. En 12 mois et sur 14 projets, j&apos;ai pu appronfondir mes connaissances sur Javascript, CSS, React/Redux, les tests et l&apos;accéssiblité
               </p>
 
-              <p className={theme === 'dark' ? styles.course : styles.courseLight}>DEVELOPPEUR WEB titre RNCP niveau 5 (bac +2) - OpenClassRooms
+              <p className={theme === 'dark' ? styles.course : styles.courseLight}>
+                <span className={styles.courseTitle}>DEVELOPPEUR WEB titre RNCP niveau 5 (bac +2) - OpenClassRooms</span>
                 <hr className={theme === 'dark' ? styles.courseHr : styles.courseHrLight} />
                 Formation en 6 mois. Elle m&apos;a permis de consolider mon socle de connaissances sur le développement web en partant de projets de sites statique en HTML/CSS, puis avec des projets Javascript frontend et backend, pour finir par un projet fullstack React, nodeJS et MySQL.
               </p>
-              <p className={theme === 'dark' ? styles.course : styles.courseLight}>Front End Development Libraries - freeCodeCamp
+            </div>
+            <div className={theme === 'dark' ? styles.courseSection : styles.courseSectionLight}>
+              <p className={theme === 'dark' ? styles.course : styles.courseLight} style={{ borderRight: "1px solid white" }}>
+                <span className={styles.courseTitle}>Front End Development Libraries - freeCodeCamp</span>
                 <hr className={theme === 'dark' ? styles.courseHr : styles.courseHrLight} />
                 Certification en approximativement 300 heures qui m&apos;initié au travers d&apos;exercices et de projets, à l&apos;utilisation de librairies front-end comme React, Redux et Bootstrap
               </p>
-              <p className={theme === 'dark' ? styles.course : styles.courseLight}>JavaScript Algorithms and Data Structures - freeCodeCamp
+              <p className={theme === 'dark' ? styles.course : styles.courseLight}>
+                <span className={styles.courseTitle}>JavaScript Algorithms and Data Structures - freeCodeCamp</span>
                 <hr className={theme === 'dark' ? styles.courseHr : styles.courseHrLight} />
                 Certification via laquelle j&apos;ai pu apprendre les fondamentaux de Javascript, manipuler les différents type de données et écrire mes premiers algorithmes.
               </p>
             </div>
-          </section>
 
+          </div>
         </section>
         <section ref={skillsRef} className={styles.skills_section}>
           <SectionSeparator title="Ma stack" />
