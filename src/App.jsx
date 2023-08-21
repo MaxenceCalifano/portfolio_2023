@@ -50,14 +50,15 @@ export default function Home() {
         </Navbar>
 
         <h1>Je suis Maxence,<br />Développeur Web</h1>
-        <h2>Je construis des applications Web à l&apos;aide de React.JS, Node.JS, Express et MySQL</h2>
+        <h2>Je construis des applications Web et Mobile</h2>
         <Button scrollTo={scrollTo} projectsRef={projectsRef}>Découvrir mes projets</Button>
-        <div className={styles.socials}>
+        <div className={theme === 'dark' ? styles.socials : styles.socialsLight}>
           <a href='https://github.com/MaxenceCalifano'><FaGithub /></a>
           <a href='https://www.linkedin.com/in/maxence-califano/'><FaLinkedinIn /></a>
           <hr style={theme === 'dark' ? { backgroundColor: "#454545" } : { backgroundColor: "white" }} aria-hidden="true" />
         </div>
       </header>
+      <div></div>
 
       <main className={theme === 'dark' ? `${styles.main}` : `${styles.main} ${styles.main_light}`}>
 

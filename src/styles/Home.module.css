@@ -33,12 +33,28 @@
   margin: 1rem 0;
 }
 
-.socials {
+.socials,
+.socialsLight {
   display: flex;
   gap: 10px;
 }
 
-.socials hr {
+.socialsLight a:hover,
+.socials a:hover {
+  transform: scale(1.2);
+  transition: all 0.25s ease;
+}
+
+.socials a:hover {
+  color: white;
+}
+
+.socialsLight a:hover {
+  color: var(--card-color);
+}
+
+.socials hr,
+.socialsLight hr {
   flex-grow: 2;
   border: 0;
   height: 2px;
@@ -89,6 +105,10 @@
   padding: 0.5rem;
   border-radius: 5px;
   color: #ffffff;
+}
+
+.filterButton:hover {
+  background-color: rgb(50, 50, 50);
 }
 
 .filterButtonLight {
