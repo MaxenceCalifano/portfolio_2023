@@ -19,6 +19,7 @@ export default function Home() {
   const skillsRef = useRef();
   const aboutRef = useRef();
   const contactRef = useRef();
+  const formationRef = useRef();
 
   const [sortedProjets, setSortedProjects] = useState(projects)
   const [selectedFilter, setSelectedFilter] = useState(0)
@@ -44,7 +45,8 @@ export default function Home() {
           projectsRef={projectsRef}
           skillsRef={skillsRef}
           aboutRef={aboutRef}
-          contactRef={contactRef}>
+          contactRef={contactRef}
+          formationRef={formationRef}>
         </Navbar>
 
         <h1>Je suis Maxence,<br />Développeur Web</h1>
@@ -58,6 +60,24 @@ export default function Home() {
       </header>
 
       <main className={theme === 'dark' ? `${styles.main}` : `${styles.main} ${styles.main_light}`}>
+
+        {/* ----------------ABOUT------------ */}
+        <section ref={aboutRef} className={theme === 'dark' ? styles.about : `${styles.about} ${styles.about_light}`} >
+          <SectionSeparator title='A propos' />
+          <p>J&apos;ai découvert par hasard le développement web en créant un site pour un projet personnel, j&apos;ai tellement aimé
+            que j&apos;ai décidé de me reconvertir et d&apos;en faire mon métier. <br />
+            Autodidacte pendant 3 ans puis diplômé de la formation développeur Web d’OpenClassRooms, je suis aujourd’hui notamment capable de : <br />
+            <ul>
+              <li><FaCircleCheck /> Créer des interfaces utilisateur, en créant des composants réutilisables avec React</li>
+              <li><FaCircleCheck /> Gérer les états de l’application avec Redux</li>
+              <li><FaCircleCheck /> Intégrer une maquette de manière responsive en HTML/CSS/SASS</li>
+              <li><FaCircleCheck /> Créer une API avec NodeJS / ExpressJS et réaliser les opérations CRUD</li>
+              <li><FaCircleCheck /> Gérer un stockage de données MongoDB ou MySQL</li>
+              <li><FaCircleCheck /> Versionner mon code et collaborer avec Git / Github</li>
+            </ul>
+            Contactez-moi pour me parler de votre projet 👋
+          </p>
+        </section>
         <section>
           <SectionSeparator title="Mes projets" />
 
@@ -78,7 +98,7 @@ export default function Home() {
             </ProjectCard>)}
           </div>
 
-          <section>
+          <section ref={formationRef} >
             <SectionSeparator title='Formations' />
             <div style={{ width: '90%', margin: 'auto' }}>
               <p className={theme === 'dark' ? styles.course : styles.courseLight}>
@@ -121,22 +141,6 @@ export default function Home() {
               <li><FaRegFileCode /> MongoDB</li>/
             </SkillsCard>
           </div>
-        </section>
-        <section ref={aboutRef} className={theme === 'dark' ? styles.about : `${styles.about} ${styles.about_light}`} >
-          <SectionSeparator title='A propos' />
-          <p>J&apos;ai découvert par hasard le développement web en créant un site pour un projet personnel, j&apos;ai tellement aimé
-            que j&apos;ai décidé de me reconvertir et d&apos;en faire mon métier. <br />
-            Autodidacte pendant 3 ans puis diplômé de la formation développeur Web d’OpenClassRooms, je suis aujourd’hui notamment capable de : <br />
-            <ul>
-              <li><FaCircleCheck /> Créer des interfaces utilisateur, en créant des composants réutilisables avec React</li>
-              <li><FaCircleCheck /> Gérer les états de l’application avec Redux</li>
-              <li><FaCircleCheck /> Intégrer une maquette de manière responsive en HTML/CSS/SASS</li>
-              <li><FaCircleCheck /> Créer une API avec NodeJS / ExpressJS et réaliser les opérations CRUD</li>
-              <li><FaCircleCheck /> Gérer un stockage de données MongoDB ou MySQL</li>
-              <li><FaCircleCheck /> Versionner mon code et collaborer avec Git / Github</li>
-            </ul>
-            Contactez-moi pour me parler de votre projet 👋
-          </p>
         </section>
         <section className={styles.contact} ref={contactRef} >
           <SectionSeparator title='Contact' />
