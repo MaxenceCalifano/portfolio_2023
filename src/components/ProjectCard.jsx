@@ -1,5 +1,5 @@
 import styles from '../styles/projectCard.module.css'
-import { useContext } from "react";
+import { useContext, useEffect, useRef } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
@@ -11,12 +11,29 @@ export default function ProjectCard(props) {
     const height = props.height;
     const width = props.width;
 
+    const projectRef = useRef()
+
     const { theme } = useContext(ThemeContext)
+
+    const windowHeight = window.innerHeight;
+    useEffect(() => {
+        window.addEventListener('scroll', onScroll)
+
+        return () => window.removeEventListener('scroll', onScroll)
+    })
+
+    const onScroll = () => {
+        const topPos = projectRef.current.getBoundingClientRect().top
+        if (topPos < windowHeight - 150) { // We want the element to be 150px above the bottom of the screen
+            console.log('visible')
+            projectRef.current.classList.add(styles.active)
+        }
+    }
     return (
         <>
             {props.reverse ?
 
-                <div className={theme === 'dark' ? `${styles.card} ${styles.reverseCard}` : `${styles.card} ${styles.card_light} ${styles.reverseCard}`}>
+                <div ref={projectRef} className={theme === 'dark' ? `${styles.card} ${styles.reverseCard}` : `${styles.card} ${styles.card_light} ${styles.reverseCard}`}>
 
                     <a className={styles.image_container} href={props.demoLink}>
                         <img
@@ -45,7 +62,7 @@ export default function ProjectCard(props) {
                     </div>
                 </div>
 
-                : <div className={theme === 'dark' ? `${styles.card}` : `${styles.card} ${styles.card_light} `}>
+                : <div ref={projectRef} className={theme === 'dark' ? `${styles.card}` : `${styles.card} ${styles.card_light} `}>
 
 
                     <a className={styles.image_container} /* className={styles.image}  */ href={props.demoLink}>

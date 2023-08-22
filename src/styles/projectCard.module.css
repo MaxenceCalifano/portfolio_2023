@@ -3,13 +3,24 @@
     align-items: center;
     padding: 40px 0;
     justify-content: center;
-    /* opacity: 0;
-    transform: translateX(-150px); */
+    opacity: 0;
+    transform: translateX(-150px);
+    transition: 1s all ease;
 }
 
 .card.card_light {
     color: var(--background-color);
-    transition: all ease-in-out 300ms;
+    transition: all ease-in-out 1s;
+}
+
+.reverseCard {
+    flex-direction: row-reverse;
+    transform: translateX(150px);
+}
+
+.active {
+    transform: translateX(0);
+    opacity: 1;
 }
 
 .card.card_light .project_description {
@@ -17,9 +28,7 @@
     color: var(--card-color);
 }
 
-.reverseCard {
-    flex-direction: row-reverse;
-}
+
 
 .project_title {
     display: inline;

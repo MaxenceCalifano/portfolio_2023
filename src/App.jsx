@@ -125,7 +125,7 @@ export default function Home() {
               githubLink={project.githubLink}
               demoLink={project.demoLink}
               reverse={index % 2 === 0 ? false : true}
-              key={{ index }}>
+              key={index}>
               {project.text}
             </ProjectCard>)}
           </div>
