@@ -8,8 +8,9 @@ import ContactForm from './components/ContactForm'
 import Button from './components/Button'
 import Footer from './components/footer'
 import { ThemeContext } from './components/Themes/ThemeContext';
-import { useRef, useContext, useState } from 'react'
+import { useRef, useContext, useState, useEffect } from 'react'
 import { FaGithub, FaLinkedinIn, FaCode, FaSass, FaJs, FaReact, FaAnglesRight, FaNodeJs, FaCodeCompare, FaDatabase, FaServer, FaRegFileCode, FaCircleCheck } from "react-icons/fa6";
+import { FaRandom } from "react-icons/fa";
 export default function Home() {
 
   const { theme } = useContext(ThemeContext)
@@ -20,9 +21,33 @@ export default function Home() {
   const aboutRef = useRef();
   const contactRef = useRef();
   const formationRef = useRef();
+  const course1 = useRef();
+  const course2 = useRef();
+
+  const headerSentences = ["Je construis des applications Web et Mobile", "En reconversion et passionné", "Disponible pour vos missions freelance"]
 
   const [sortedProjets, setSortedProjects] = useState(projects)
   const [selectedFilter, setSelectedFilter] = useState(0)
+  const [sentenceIndex, setSentenceIndex] = useState(0)
+
+  const windowHeight = window.innerHeight;
+  useEffect(() => {
+    window.addEventListener('scroll', onScroll)
+
+    return () => window.removeEventListener('scroll', onScroll)
+  })
+
+  const onScroll = () => {
+    const elements = [course1, course2]
+
+    for (let i = 0; i < elements.length; i++) {
+      const topPos = elements[i].current.getBoundingClientRect().top
+      if (topPos < windowHeight - 150) { // We want the element to be 150px above the bottom of the screen
+        console.log('visible')
+        elements[i].current.classList.add(styles.active)
+      }
+    }
+  }
 
   function scrollTo(target) {
     target.current.scrollIntoView({
@@ -50,7 +75,11 @@ export default function Home() {
         </Navbar>
 
         <h1>Je suis Maxence,<br />Développeur Web</h1>
-        <h2>Je construis des applications Web et Mobile</h2>
+        <div className={styles.dynamicSentences}>
+          <h2>{headerSentences[sentenceIndex]}</h2>
+          <FaRandom onClick={() => sentenceIndex < headerSentences.length - 1 ? setSentenceIndex(sentenceIndex + 1) : setSentenceIndex(0)} />
+        </div>
+
         <Button scrollTo={scrollTo} projectsRef={projectsRef}>Découvrir mes projets</Button>
         <div className={theme === 'dark' ? styles.socials : styles.socialsLight}>
           <a href='https://github.com/MaxenceCalifano'><FaGithub /></a>
@@ -104,7 +133,7 @@ export default function Home() {
         <section ref={formationRef} >
           <SectionSeparator title='Formations' />
           <div className={styles.courseWrapper} >
-            <div className={theme === 'dark' ? styles.courseSection : styles.courseSectionLight}>
+            <div ref={course1} className={theme === 'dark' ? `${styles.courseSection} ${styles.courseSectionLeft}` : `${styles.courseSectionLight} ${styles.courseSectionLeft}`}>
               <p className={theme === 'dark' ? styles.course : styles.courseLight} style={{ borderRight: "1px solid white" }}>
                 <span className={styles.courseTitle}>DEVELOPPEUR D&apos;APPLICATION Javascript React titre RNCP niveau 6 (bac +3/4) - OpenClassRooms</span>
                 <hr className={theme === 'dark' ? styles.courseHr : styles.courseHrLight} />
@@ -117,7 +146,7 @@ export default function Home() {
                 Formation en 6 mois. Elle m&apos;a permis de consolider mon socle de connaissances sur le développement web en partant de projets de sites statique en HTML/CSS, puis avec des projets Javascript frontend et backend, pour finir par un projet fullstack React, nodeJS et MySQL.
               </p>
             </div>
-            <div className={theme === 'dark' ? styles.courseSection : styles.courseSectionLight}>
+            <div ref={course2} className={theme === 'dark' ? `${styles.courseSection} ${styles.courseSectionRight}` : `${styles.courseSectionLight} ${styles.courseSectionRight}`}>
               <p className={theme === 'dark' ? styles.course : styles.courseLight} style={{ borderRight: "1px solid white" }}>
                 <span className={styles.courseTitle}>Front End Development Libraries - freeCodeCamp</span>
                 <hr className={theme === 'dark' ? styles.courseHr : styles.courseHrLight} />

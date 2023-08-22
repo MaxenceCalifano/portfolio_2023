@@ -1,5 +1,6 @@
 .header {
-  background-color: var(--main-color);
+  /* background-color: var(--main-color); */
+  background: linear-gradient(96deg, rgba(146, 202, 213, 1) 30%, rgba(80, 147, 160, 1) 100%);
   padding: 1rem;
   height: 100vh;
   color: #454545;
@@ -17,6 +18,11 @@
   color: #ffffff;
 }
 
+.header_light {
+  background: linear-gradient(96deg, rgba(80, 147, 160, 1) 30%, rgba(146, 202, 213, 1) 100%);
+
+}
+
 .header h1 {
   font-size: 4rem;
   font-family: 'Sansita Swashed', cursive;
@@ -31,6 +37,24 @@
 .header h2,
 .header button {
   margin: 1rem 0;
+}
+
+.dynamicSentences {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  transition: all 0.5s ease-in;
+}
+
+.dynamicSentences svg {
+  cursor: pointer;
+}
+
+.dynamicSentences svg:hover {
+  color: white;
+  transform: scale(1.1);
+  transition: all .5s ease;
 }
 
 .socials,
@@ -87,6 +111,11 @@
   border-color: var(--background-color);
 }
 
+.project {
+  opacity: 0;
+  transform: translateX(-150px);
+}
+
 .projects {
   display: flex;
   flex-direction: column;
@@ -109,6 +138,11 @@
 
 .filterButton:hover {
   background-color: rgb(50, 50, 50);
+}
+
+.filterButtonLight:hover {
+  background-color: rgb(50, 50, 50);
+  color: white;
 }
 
 .filterButtonLight {
@@ -137,6 +171,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  overflow: hidden;
 }
 
 .courseWrapper div:first-child {
@@ -154,7 +189,19 @@
   width: 90%;
   align-items: stretch;
   background: var(--card-color);
+  opacity: 0;
+  transition: 1s all ease;
 }
+
+.courseSectionLeft {
+  transform: translateX(-150px);
+}
+
+.courseSectionRight {
+  transform: translateX(150px);
+}
+
+
 
 .courseSectionLight {
   background: var(--main-color);
@@ -162,6 +209,13 @@
   gap: 10px;
   width: 90%;
   align-items: stretch;
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.active {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .course {
