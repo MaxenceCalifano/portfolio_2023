@@ -96,18 +96,18 @@ export default function Home() {
           <SectionSeparator title='A propos' />
           <p>J&apos;ai découvert par hasard le développement web en créant un site pour un projet personnel, j&apos;ai tellement aimé
             que j&apos;ai décidé de me reconvertir et d&apos;en faire mon métier. <br />
-            Autodidacte pendant 3 ans puis diplômé de la formation développeur Web d’OpenClassRooms, je suis aujourd’hui notamment capable de : <br />
-            <ul>
-              <li><FaCircleCheck /> Créer des interfaces utilisateur, en créant des composants réutilisables avec React</li>
-              <li><FaCircleCheck /> Gérer les états de l’application avec Redux</li>
-              <li><FaCircleCheck /> Intégrer une maquette de manière responsive en HTML/CSS/SASS</li>
-              <li><FaCircleCheck /> Créer une API avec NodeJS / ExpressJS et réaliser les opérations CRUD</li>
-              <li><FaCircleCheck /> Gérer un stockage de données MongoDB ou MySQL</li>
-              <li><FaCircleCheck /> Versionner mon code et collaborer avec Git / Github</li>
-            </ul>
-            Contactez-moi pour me parler de votre projet 👋
-          </p>
+            Autodidacte pendant 3 ans puis diplômé de la formation développeur Web d’OpenClassRooms, je suis aujourd’hui notamment capable de :</p>
+          <ul>
+            <li><FaCircleCheck /> Créer des interfaces utilisateur, en créant des composants réutilisables avec React</li>
+            <li><FaCircleCheck /> Gérer les états de l’application avec Redux</li>
+            <li><FaCircleCheck /> Intégrer une maquette de manière responsive en HTML/CSS/SASS</li>
+            <li><FaCircleCheck /> Créer une API avec NodeJS / ExpressJS et réaliser les opérations CRUD</li>
+            <li><FaCircleCheck /> Gérer un stockage de données MongoDB ou MySQL</li>
+            <li><FaCircleCheck /> Versionner mon code et collaborer avec Git / Github</li>
+          </ul>
+          <p>Contactez-moi pour me parler de votre projet 👋</p>
         </section>
+
         <section>
           <SectionSeparator title="Mes projets" />
           <div className={styles.projectsButtons}>
@@ -118,14 +118,14 @@ export default function Home() {
 
 
           <div ref={projectsRef} id="projects" className={styles.projects}>
-            {sortedProjets.map((project, key) => <ProjectCard
+            {sortedProjets.map((project, index) => <ProjectCard
               imgSrc={project.imgSrc}
               title={project.title}
               techList={project.techList}
               githubLink={project.githubLink}
               demoLink={project.demoLink}
-              reverse={key % 2 === 0 ? false : true}
-              key={{ key }}>
+              reverse={index % 2 === 0 ? false : true}
+              key={{ index }}>
               {project.text}
             </ProjectCard>)}
           </div>
@@ -134,11 +134,11 @@ export default function Home() {
           <SectionSeparator title='Formations' />
           <div className={styles.courseWrapper} >
             <div ref={course1} className={theme === 'dark' ? `${styles.courseSection} ${styles.courseSectionLeft}` : `${styles.courseSectionLight} ${styles.courseSectionLeft}`}>
-              <p className={theme === 'dark' ? styles.course : styles.courseLight} style={{ borderRight: "1px solid white" }}>
+              <div className={theme === 'dark' ? styles.course : styles.courseLight} style={{ borderRight: "1px solid white" }}>
                 <span className={styles.courseTitle}>DEVELOPPEUR D&apos;APPLICATION Javascript React titre RNCP niveau 6 (bac +3/4) - OpenClassRooms</span>
                 <hr className={theme === 'dark' ? styles.courseHr : styles.courseHrLight} />
-                Formation très complémentaire à la formation développpeur web. En 12 mois et sur 14 projets, j&apos;ai pu appronfondir mes connaissances sur Javascript, CSS, React/Redux, les tests et l&apos;accéssiblité
-              </p>
+                <p>Formation très complémentaire à la formation développpeur web. En 12 mois et sur 14 projets, j&apos;ai pu appronfondir mes connaissances sur Javascript, CSS, React/Redux, les tests et l&apos;accéssiblité</p>
+              </div>
 
               <p className={theme === 'dark' ? styles.course : styles.courseLight}>
                 <span className={styles.courseTitle}>DEVELOPPEUR WEB titre RNCP niveau 5 (bac +2) - OpenClassRooms</span>

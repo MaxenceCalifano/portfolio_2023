@@ -3,6 +3,8 @@
     align-items: center;
     padding: 40px 0;
     justify-content: center;
+    /* opacity: 0;
+    transform: translateX(-150px); */
 }
 
 .card.card_light {
