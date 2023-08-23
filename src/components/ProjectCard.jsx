@@ -32,7 +32,7 @@ export default function ProjectCard(props) {
         <>
             {props.reverse ?
                 <div>
-                    <h4 className={`${styles.project_title} ${styles.mobile}`}>{props.title}<hr /></h4>
+                    <h4 className={theme === 'dark' ? `${styles.project_title} ${styles.mobile}` : `${styles.project_title} ${styles.light} ${styles.mobile}`}>{props.title}<hr /></h4>
                     <div ref={projectRef} className={theme === 'dark' ? `${styles.card} ${styles.reverseCard}` : `${styles.card} ${styles.card_light} ${styles.reverseCard}`}>
 
                         <a className={styles.image_container} href={props.demoLink}>
@@ -66,7 +66,7 @@ export default function ProjectCard(props) {
 
                 :
                 <div>
-                    <h4 className={`${styles.project_title} ${styles.mobile}`}>{props.title}<hr /></h4>
+                    <h4 className={theme === 'dark' ? `${styles.project_title} ${styles.mobile}` : `${styles.project_title} ${styles.light} ${styles.mobile}`}>{props.title}<hr /></h4>
                     <div ref={projectRef} className={theme === 'dark' ? `${styles.card}` : `${styles.card} ${styles.card_light} `}>
                         <a className={styles.image_container} /* className={styles.image}  */ href={props.demoLink}>
                             <img
