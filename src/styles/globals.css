@@ -18,6 +18,12 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+p,
+a,
+li {
+  line-height: 1.3rem;
+}
+
 .courseSection {
   display: flex;
   gap: 10px;

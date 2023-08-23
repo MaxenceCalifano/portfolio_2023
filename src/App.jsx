@@ -43,7 +43,6 @@ export default function Home() {
     for (let i = 0; i < elements.length; i++) {
       const topPos = elements[i].current.getBoundingClientRect().top
       if (topPos < windowHeight - 150) { // We want the element to be 150px above the bottom of the screen
-        console.log('visible')
         elements[i].current.classList.add(styles.active)
       }
     }
@@ -143,23 +142,23 @@ export default function Home() {
                 <p>Formation très complémentaire à la formation développpeur web. En 12 mois et sur 14 projets, j&apos;ai pu appronfondir mes connaissances sur Javascript, CSS, React/Redux, les tests et l&apos;accéssiblité</p>
               </div>
 
-              <p className={theme === 'dark' ? styles.course : styles.courseLight}>
+              <div className={theme === 'dark' ? styles.course : styles.courseLight}>
                 <span className={styles.courseTitle}>DEVELOPPEUR WEB titre RNCP niveau 5 (bac +2) - OpenClassRooms</span>
                 <hr className={theme === 'dark' ? styles.courseHr : styles.courseHrLight} />
-                Formation en 6 mois. Elle m&apos;a permis de consolider mon socle de connaissances sur le développement web en partant de projets de sites statique en HTML/CSS, puis avec des projets Javascript frontend et backend, pour finir par un projet fullstack React, nodeJS et MySQL.
-              </p>
+                <p>Formation en 6 mois. Elle m&apos;a permis de consolider mon socle de connaissances sur le développement web en partant de projets de sites statique en HTML/CSS, puis avec des projets Javascript frontend et backend, pour finir par un projet fullstack React, nodeJS et MySQL.</p>
+              </div>
             </div>
             <div ref={course2} className={theme === 'dark' ? `${styles.courseSection} ${styles.courseSectionRight}` : `${styles.courseSectionLight} ${styles.courseSectionRight}`}>
-              <p className={theme === 'dark' ? styles.course : styles.courseLight} style={{ borderRight: "1px solid white" }}>
+              <div className={theme === 'dark' ? styles.course : styles.courseLight} style={{ borderRight: "1px solid white" }}>
                 <span className={styles.courseTitle}>Front End Development Libraries - freeCodeCamp</span>
                 <hr className={theme === 'dark' ? styles.courseHr : styles.courseHrLight} />
-                Certification en approximativement 300 heures qui m&apos;initié au travers d&apos;exercices et de projets, à l&apos;utilisation de librairies front-end comme React, Redux et Bootstrap
-              </p>
-              <p className={theme === 'dark' ? styles.course : styles.courseLight}>
+                <p>Certification en approximativement 300 heures qui m&apos;initié au travers d&apos;exercices et de projets, à l&apos;utilisation de librairies front-end comme React, Redux et Bootstrap</p>
+              </div>
+              <div className={theme === 'dark' ? styles.course : styles.courseLight}>
                 <span className={styles.courseTitle}>JavaScript Algorithms and Data Structures - freeCodeCamp</span>
                 <hr className={theme === 'dark' ? styles.courseHr : styles.courseHrLight} />
-                Certification via laquelle j&apos;ai pu apprendre les fondamentaux de Javascript, manipuler les différents type de données et écrire mes premiers algorithmes.
-              </p>
+                <p>Certification via laquelle j&apos;ai pu apprendre les fondamentaux de Javascript, manipuler les différents type de données et écrire mes premiers algorithmes.</p>
+              </div>
             </div>
 
           </div>

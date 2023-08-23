@@ -290,4 +290,13 @@
   .header h1 {
     font-size: 3rem;
   }
+
+  .courseSection,
+  .courseSectionLight {
+    flex-direction: column;
+  }
+
+  .course {
+    width: 100%;
+  }
 }

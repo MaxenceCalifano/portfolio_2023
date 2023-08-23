@@ -29,9 +29,12 @@
 }
 
 
-
 .project_title {
     display: inline;
+}
+
+.project_title.mobile {
+    display: none;
 }
 
 .project_title hr {
@@ -156,11 +159,41 @@
 }
 
 @media (max-width: 1080px) {
-    .image {
-        width: 90%;
+    .project_title.mobile {
+        display: block;
+    }
+
+    .project_title {
+        display: none;
+    }
+
+    .card,
+    .reverseCard {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .project_description,
+    .project_descriptionReverse {
+        border-radius: 10px;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .project_image {
+        /* height: 100%; */
     }
 }
 
+@media (max-width: 576px) {
+    .project_image {
+        object-fit: cover;
+    }
+}
+
+/*
 @media (max-width: 768px) {
     .image {
         margin-bottom: 10%;
@@ -192,4 +225,4 @@
     .image {
         display: none;
     }
-}
+} */
