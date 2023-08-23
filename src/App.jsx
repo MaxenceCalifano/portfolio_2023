@@ -136,12 +136,12 @@ export default function Home() {
           <SectionSeparator title='Formations' />
           <div className={styles.courseWrapper} >
             <div ref={course1} className={theme === 'dark' ? `${styles.courseSection} ${styles.courseSectionLeft}` : `${styles.courseSectionLight} ${styles.courseSectionLeft}`}>
-              <div className={theme === 'dark' ? styles.course : styles.courseLight} style={{ borderRight: "1px solid white" }}>
+              <div className={theme === 'dark' ? styles.course : styles.courseLight} >
                 <span className={styles.courseTitle}>DEVELOPPEUR D&apos;APPLICATION Javascript React titre RNCP niveau 6 (bac +3/4) - OpenClassRooms</span>
                 <hr className={theme === 'dark' ? styles.courseHr : styles.courseHrLight} />
                 <p>Formation très complémentaire à la formation développpeur web. En 12 mois et sur 14 projets, j&apos;ai pu appronfondir mes connaissances sur Javascript, CSS, React/Redux, les tests et l&apos;accéssiblité</p>
               </div>
-
+              <hr />
               <div className={theme === 'dark' ? styles.course : styles.courseLight}>
                 <span className={styles.courseTitle}>DEVELOPPEUR WEB titre RNCP niveau 5 (bac +2) - OpenClassRooms</span>
                 <hr className={theme === 'dark' ? styles.courseHr : styles.courseHrLight} />
@@ -149,11 +149,12 @@ export default function Home() {
               </div>
             </div>
             <div ref={course2} className={theme === 'dark' ? `${styles.courseSection} ${styles.courseSectionRight}` : `${styles.courseSectionLight} ${styles.courseSectionRight}`}>
-              <div className={theme === 'dark' ? styles.course : styles.courseLight} style={{ borderRight: "1px solid white" }}>
+              <div className={theme === 'dark' ? styles.course : styles.courseLight}>
                 <span className={styles.courseTitle}>Front End Development Libraries - freeCodeCamp</span>
                 <hr className={theme === 'dark' ? styles.courseHr : styles.courseHrLight} />
                 <p>Certification en approximativement 300 heures qui m&apos;initié au travers d&apos;exercices et de projets, à l&apos;utilisation de librairies front-end comme React, Redux et Bootstrap</p>
               </div>
+              <hr />
               <div className={theme === 'dark' ? styles.course : styles.courseLight}>
                 <span className={styles.courseTitle}>JavaScript Algorithms and Data Structures - freeCodeCamp</span>
                 <hr className={theme === 'dark' ? styles.courseHr : styles.courseHrLight} />
