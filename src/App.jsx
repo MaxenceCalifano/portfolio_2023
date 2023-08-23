@@ -11,6 +11,7 @@ import { ThemeContext } from './components/Themes/ThemeContext';
 import { useRef, useContext, useState, useEffect } from 'react'
 import { FaGithub, FaLinkedinIn, FaCode, FaSass, FaJs, FaReact, FaAnglesRight, FaNodeJs, FaCodeCompare, FaDatabase, FaServer, FaRegFileCode, FaCircleCheck } from "react-icons/fa6";
 import { FaRandom } from "react-icons/fa";
+import { TbBrandRedux, TbBrandSupabase } from "react-icons/tb";
 export default function Home() {
 
   const { theme } = useContext(ThemeContext)
@@ -171,15 +172,17 @@ export default function Home() {
               <li><FaCode /> HTML/CSS</li>
               <li><FaSass /> SASS</li>
               <li><FaJs /> Javascript</li>
-              <li><FaReact /> React/Redux</li>
+              <li><FaReact /> React/React Native</li>
+              <li><TbBrandRedux /> Redux</li>
               <li><FaAnglesRight /> Next.JS</li>
             </SkillsCard>
             <SkillsCard title='Développement backend'>
               <li><FaNodeJs /> Node.JS</li>
               <li><FaCodeCompare /> Express</li>
+              <li><TbBrandSupabase /> Supabase</li>
               <li><FaDatabase /> MySQL</li>
               <li><FaServer /> API Rest</li>
-              <li><FaRegFileCode /> MongoDB</li>/
+              <li><FaRegFileCode /> MongoDB</li>
             </SkillsCard>
           </div>
         </section>
