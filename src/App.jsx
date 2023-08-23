@@ -97,14 +97,16 @@ export default function Home() {
           <div className={styles.aboutContent}>
             <p>J&apos;ai découvert par hasard le développement web en créant un site pour un projet personnel, j&apos;ai tellement aimé
               que j&apos;ai décidé de me reconvertir et d&apos;en faire mon métier. <br />
-              Autodidacte pendant 3 ans puis diplômé de la formation développeur Web d’OpenClassRooms, je suis aujourd’hui notamment capable de :</p>
+              Autodidacte pendant 2 ans puis diplômé des formation diplômantes "développeur Web" et "développeur d'applications JavaScript/React" d&apos;OpenClassRooms, je suis aujourd&apos;hui notamment capable de :</p>
             <ul>
               <li><FaCircleCheck /> Créer des interfaces utilisateur, en créant des composants réutilisables avec React</li>
-              <li><FaCircleCheck /> Gérer les états de l’application avec Redux</li>
+              <li><FaCircleCheck /> Gérer les états de l’application avec Redux et React Context</li>
               <li><FaCircleCheck /> Intégrer une maquette de manière responsive en HTML/CSS/SASS</li>
               <li><FaCircleCheck /> Créer une API avec NodeJS / ExpressJS et réaliser les opérations CRUD</li>
               <li><FaCircleCheck /> Gérer un stockage de données MongoDB ou MySQL</li>
               <li><FaCircleCheck /> Versionner mon code et collaborer avec Git / Github</li>
+              <li><FaCircleCheck /> Déployer une application web sur un serveur</li>
+              <li><FaCircleCheck /> Créer une application mobile avec React Native/Expo</li>
             </ul>
             <p>Contactez-moi pour me parler de votre projet 👋</p>
           </div>
@@ -140,7 +142,7 @@ export default function Home() {
               <div className={theme === 'dark' ? styles.course : styles.courseLight} >
                 <span className={styles.courseTitle}>DEVELOPPEUR D&apos;APPLICATION Javascript React titre RNCP niveau 6 (bac +3/4) - OpenClassRooms</span>
                 <hr className={theme === 'dark' ? styles.courseHr : styles.courseHrLight} />
-                <p>Formation très complémentaire à la formation développpeur web. En 12 mois et sur 14 projets, j&apos;ai pu appronfondir mes connaissances sur Javascript, CSS, React/Redux, les tests et l&apos;accéssiblité</p>
+                <p>Formation très complémentaire à la formation développpeur web. En 12 mois et sur 14 projets, j&apos;ai pu appronfondir mes connaissances sur Javascript, CSS, React/Redux, Figma, la gestion de projets, les tests et l&apos;accéssiblité</p>
               </div>
               <hr />
               <div className={theme === 'dark' ? styles.course : styles.courseLight}>
