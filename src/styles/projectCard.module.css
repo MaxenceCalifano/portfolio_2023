@@ -10,7 +10,7 @@
 
 .card.card_light {
     color: var(--background-color);
-    transition: all ease-in-out 1s;
+    transition: all ease-in-out .5s;
 }
 
 .reverseCard {

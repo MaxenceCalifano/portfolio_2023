@@ -94,22 +94,25 @@ export default function Home() {
         {/* ----------------ABOUT------------ */}
         <section ref={aboutRef} className={theme === 'dark' ? styles.about : `${styles.about} ${styles.about_light}`} >
           <SectionSeparator title='A propos' />
-          <p>J&apos;ai découvert par hasard le développement web en créant un site pour un projet personnel, j&apos;ai tellement aimé
-            que j&apos;ai décidé de me reconvertir et d&apos;en faire mon métier. <br />
-            Autodidacte pendant 3 ans puis diplômé de la formation développeur Web d’OpenClassRooms, je suis aujourd’hui notamment capable de :</p>
-          <ul>
-            <li><FaCircleCheck /> Créer des interfaces utilisateur, en créant des composants réutilisables avec React</li>
-            <li><FaCircleCheck /> Gérer les états de l’application avec Redux</li>
-            <li><FaCircleCheck /> Intégrer une maquette de manière responsive en HTML/CSS/SASS</li>
-            <li><FaCircleCheck /> Créer une API avec NodeJS / ExpressJS et réaliser les opérations CRUD</li>
-            <li><FaCircleCheck /> Gérer un stockage de données MongoDB ou MySQL</li>
-            <li><FaCircleCheck /> Versionner mon code et collaborer avec Git / Github</li>
-          </ul>
-          <p>Contactez-moi pour me parler de votre projet 👋</p>
+          <div className={styles.aboutContent}>
+            <p>J&apos;ai découvert par hasard le développement web en créant un site pour un projet personnel, j&apos;ai tellement aimé
+              que j&apos;ai décidé de me reconvertir et d&apos;en faire mon métier. <br />
+              Autodidacte pendant 3 ans puis diplômé de la formation développeur Web d’OpenClassRooms, je suis aujourd’hui notamment capable de :</p>
+            <ul>
+              <li><FaCircleCheck /> Créer des interfaces utilisateur, en créant des composants réutilisables avec React</li>
+              <li><FaCircleCheck /> Gérer les états de l’application avec Redux</li>
+              <li><FaCircleCheck /> Intégrer une maquette de manière responsive en HTML/CSS/SASS</li>
+              <li><FaCircleCheck /> Créer une API avec NodeJS / ExpressJS et réaliser les opérations CRUD</li>
+              <li><FaCircleCheck /> Gérer un stockage de données MongoDB ou MySQL</li>
+              <li><FaCircleCheck /> Versionner mon code et collaborer avec Git / Github</li>
+            </ul>
+            <p>Contactez-moi pour me parler de votre projet 👋</p>
+          </div>
+
         </section>
 
-        <section>
-          <SectionSeparator title="Mes projets" />
+        <SectionSeparator title="Mes projets" />
+        <section className={styles.projectsWrapper}>
           <div className={styles.projectsButtons}>
             <button className={selectedFilter === 0 ? styles.filterButton_selected : theme === 'dark' ? styles.filterButton : styles.filterButtonLight} onClick={() => { setSortedProjects(projects); setSelectedFilter(0) }}>Tout</button>
             <button className={selectedFilter === 1 ? styles.filterButton_selected : theme === 'dark' ? styles.filterButton : styles.filterButtonLight} onClick={() => sortProjects(false)}>Projets en formations</button>

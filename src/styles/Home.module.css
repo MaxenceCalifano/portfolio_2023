@@ -116,15 +116,14 @@
   transform: translateX(-150px);
 }
 
+.projectsWrapper {
+  width: 90%;
+}
+
 .projects {
   display: flex;
   flex-direction: column;
-  padding: 0 1rem;
   overflow: hidden;
-}
-
-.projectsButtons {
-  padding: 0 1rem;
 }
 
 .filterButton {
@@ -262,6 +261,12 @@
 
 .about {
   padding: var(--padding);
+  width: 100%;
+}
+
+.aboutContent {
+  width: 90%;
+  margin: auto;
 }
 
 .about p,

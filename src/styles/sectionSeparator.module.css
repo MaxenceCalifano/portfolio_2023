@@ -7,7 +7,9 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: var(--padding);
+    margin: 1rem 0;
+    width: 90%;
+    margin: 1rem auto;
 }
 
 .projectsHeader h3 {
