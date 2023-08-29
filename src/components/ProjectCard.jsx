@@ -68,7 +68,7 @@ export default function ProjectCard(props) {
                 <div>
                     <h4 className={theme === 'dark' ? `${styles.project_title} ${styles.mobile}` : `${styles.project_title} ${styles.light} ${styles.mobile}`}>{props.title}<hr /></h4>
                     <div ref={projectRef} className={theme === 'dark' ? `${styles.card}` : `${styles.card} ${styles.card_light} `}>
-                        <a className={styles.image_container} /* className={styles.image}  */ href={props.demoLink}>
+                        <a className={styles.image_container} /* className={styles.image}  */ href={props.demoLink ? props.demoLink : props.githubLink}>
                             <img
                                 src={props.imgSrc}
                                 className={styles.project_image}

@@ -2,11 +2,19 @@ const projects = [{
   imgSrc: "../src/assets/screen_groupomania.jpg",
   title: 'Groupomania',
   techList: ['React', 'NodeJS', 'Express', 'MySQL'],
-  demoLink: 'https://maxencecalifano.github.io/OhMyFood/',
   githubLink: 'https://github.com/MaxenceCalifano/Groupomania',
   personalProject: false,
   text: <div>Groupomania est un projet de réseau social pour entreprise, on y retrouve de nombreuses fonctionnalités. L&apos;utilisateur y a la possibilité de créer un compte et de le modifier. Et de demander la réinitialisation du mot de passe si besoin. <br />Une fois connecté, il est possible de créer des posts et des commentaires, de les modifier et supprimer.Sur ce projet, j&apos;ai pu notamment, créer un backend avec nodejs et Express, gérer les données dans une base relationnelle MySQL et relié le tout à un frontend en ReactJS</div>
-}, {
+},
+{
+  imgSrc: "../src/assets/vantivities.jpg",
+  title: 'Vantivities',
+  techList: ['React Native', 'PostgreSQL', 'Supabase', 'Expo'],
+  githubLink: 'https://github.com/MaxenceCalifano/WhosUp',
+  personalProject: true,
+  text: < div > Vantivities est un projet personnel que j&apos;ai réalisé en parallèle de ma dernière formation. Cette application Android permet aux utilisateurs de créer des activités pour se rencontrer en vrai et contient un chat. Cela m&apos;a permis de travailler sur de nombreuses choses : <ul>< li > La gestion de compte utilisateur</li><li>Un chat</li><li>Les opérations CRUD</li><li>La gestion et la sécurité d&apos;une base de données SQL</li> <li>Le déploiement d&apos;une application Android</li></ul ></div >,
+},
+{
   imgSrc: "../src/assets/Sans-titre-2.jpg",
   title: 'OhMyFood!',
   techList: ['HTML/CSS ', 'SASS ', 'Responsive/Mobile first'],
@@ -14,15 +22,6 @@ const projects = [{
   githubLink: 'https://github.com/MaxenceCalifano/OhMyFood',
   personalProject: false,
   text: <div>Réalisation dans le cadre de ma formation développeur web d&apos;un site web responsive pour une application de réservation de repas en ligne. On y retrouve des animations CSS avancées et j&apos;ai notamment utilisé la méthodologie BEM et le préprocesseur SASS.</div>
-},
-{
-  imgSrc: "../src/assets/vantivities.jpg",
-  title: 'Vantivities',
-  techList: ['React Native', 'PostgreSQL', 'Supabase', 'Expo'],
-  demoLink: 'https://sportsee.maxencecalifano.tech/',
-  githubLink: 'https://sportsee.maxencecalifano.tech/',
-  personalProject: true,
-  text: < div > Vantivities est un projet personnel que j&apos;ai réalisé en parallèle de ma dernière formation. Cette application Android permet aux utilisateurs de créer des activités pour se rencontrer en vrai et contient un chat. Cela m&apos;a permis de travailler sur de nombreuses choses : <ul>< li > La gestion de compte utilisateur</li><li>Un chat</li><li>Les opérations CRUD</li><li>La gestion et la sécurité d&apos;une base de données SQL</li> <li>Le déploiement d&apos;une application Android</li></ul ></div >,
 },
 {
   imgSrc: "../src/assets/screen_react_calculator.jpg",
@@ -46,7 +45,6 @@ const projects = [{
   imgSrc: "../src/assets/kasa.png",
   title: 'Kasa',
   techList: ['React', 'React-Router'],
-  demoLink: 'https://maxencecalifano.github.io/les_petits_plats/',
   githubLink: 'https://github.com/MaxenceCalifano/kasa/tree/master',
   personalProject: false,
   text: <div>Front-end d&apos;une application d&apos;annonces immobilière, projet dans le cadre de la formation &lsquo;&lsquo;développeur d&apos;application React&lsquo;&lsquo; de Open Classrooms. <br />La gestion des routes est effectué via React-Router. L&apos;intégration de la maquette est réalisée avec React, en veillant à créer des composants réutilisables.</div>
